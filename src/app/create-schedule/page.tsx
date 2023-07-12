@@ -8,7 +8,7 @@ const CreateSchedule = () => {
   // const searchParams = useSearchParams();
   // const type = searchParams?.get('type');
   // console.log(type)
-  // useTestHook()
+  useTestHook()
   const type = 'match'
   return <div className={`${type === 'match' ? 'container-red' : 'container-green'}`}>
     {/* <Translate stringKey='general.cancel'></Translate> */}
@@ -18,8 +18,8 @@ const CreateSchedule = () => {
 
 export default CreateSchedule
 
-// const useTestHook = () => {
-//   useEffect(() => {
-//     console.log("test hook")
-//   }, [])
-// }
+const useTestHook = () => {
+  useEffect(() => {
+    console.log("test hook")
+  }, [])
+}
