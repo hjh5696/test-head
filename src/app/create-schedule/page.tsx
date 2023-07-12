@@ -16,7 +16,7 @@ const CreateSchedule = () => {
 }
 
 const Container = () => {
-  <Suspense fallback='loading..'>
+  <Suspense fallback={<p>Loading feed...</p>}>
     <CreateSchedule></CreateSchedule>
   </Suspense>
 }
