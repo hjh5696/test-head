@@ -16,6 +16,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          id="set-theme"
+          dangerouslySetInnerHTML={{
+            __html: `
+            const params = new URL(document.location).searchParams;
+            console.log('✅ head script is running', params);
+            const theme = params.get("theme") ?? "light"
+            document.documentElement.classList.add(theme)
+            `
+          }}
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
