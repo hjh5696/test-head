@@ -8,7 +8,7 @@ const CreateSchedule = () => {
   const type = searchParams?.get('type');
   console.log(type)
   return <div className={`${type === 'match' ? 'container-red' : 'container-green'}`}>
-    <Translate stringKey='general.cancel'></Translate>
+    {/* <Translate stringKey='general.cancel'></Translate> */}
     {'\ntest createSchedule'}
   </div>
 }
