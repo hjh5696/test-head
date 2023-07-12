@@ -1,8 +1,6 @@
 'use client';
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 // import { Translate } from '../_components/translation/Translate';
-import './create-schedule.css'
 
 const CreateSchedule = () => {
   const searchParams = useSearchParams();
