@@ -392,7 +392,8 @@ export const Translate: React.FunctionComponent<TranslateProps> = ({
   stringKey,
   args = []
 }) => {
-  const string = useTranslatedString(stringKey, args);
+  // const string = useTranslatedString(stringKey, args);
+  const string = 'TTTEEEEST'
 
   return <>{string || <pre> </pre>}</>;
 };
