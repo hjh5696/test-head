@@ -1,16 +1,18 @@
 'use client';
-// import { useSearchParams } from 'next/navigation';
-import { Translate } from '../_components/translation/Translate';
+import { useSearchParams, usePathname } from 'next/navigation';
+// import { Translate } from '../_components/translation/Translate';
 import './create-schedule.css'
 
 const CreateSchedule = () => {
   // const searchParams = useSearchParams();
   // const type = searchParams?.get('type');
   // console.log(type)
+  const pathName = usePathname()
+  console.log(pathName)
   
   const type = 'match'
   return <div className={`${type === 'match' ? 'container-red' : 'container-green'}`}>
-    <Translate stringKey='general.cancel'></Translate>
+    {/* <Translate stringKey='general.cancel'></Translate> */}
     {'\ntest createSchedule'}
   </div>
 }

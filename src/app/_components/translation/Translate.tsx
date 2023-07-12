@@ -367,8 +367,7 @@ export const getFormatString = (stringKey: string, lang: string) => {
 
 const useFormatString = (stringKey: string) => {
   const [formatString, setFormatString] = useState('');
-  // const lang = useLanguage();
-  const lang = 'ko'
+  const lang = useLanguage();
 
   useEffect(() => {
     if (!lang || !stringKey) return;
