@@ -3,12 +3,12 @@ import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 // import { Translate } from '../_components/translation/Translate';
 import './create-schedule.css'
 
+export const dynamic = 'force-dynamic'
+
 const CreateSchedule = () => {
   // const searchParams = useSearchParams();
   // const type = searchParams?.get('type');
   // console.log(type)
-  const router = useRouter()
-  console.log(router)
   
   const type = 'match'
   return <div className={`${type === 'match' ? 'container-red' : 'container-green'}`}>
