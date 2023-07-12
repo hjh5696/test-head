@@ -367,7 +367,8 @@ export const getFormatString = (stringKey: string, lang: string) => {
 
 const useFormatString = (stringKey: string) => {
   const [formatString, setFormatString] = useState('');
-  const lang = useLanguage();
+  // const lang = useLanguage();
+  const lang = 'ko'
 
   useEffect(() => {
     if (!lang || !stringKey) return;
@@ -392,8 +393,7 @@ export const Translate: React.FunctionComponent<TranslateProps> = ({
   stringKey,
   args = []
 }) => {
-  // const string = useTranslatedString(stringKey, args);
-  const string = 'TTTEEEEST'
+  const string = useTranslatedString(stringKey, args);
 
   return <>{string || <pre> </pre>}</>;
 };
