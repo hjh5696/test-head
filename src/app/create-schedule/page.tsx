@@ -1,9 +1,8 @@
 'use client';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
 // import { Translate } from '../_components/translation/Translate';
 import './create-schedule.css'
-
-export const dynamic = 'force-dynamic'
 
 const CreateSchedule = () => {
   const searchParams = useSearchParams();
@@ -16,4 +15,10 @@ const CreateSchedule = () => {
   </div>
 }
 
-export default CreateSchedule
+const Container = () => {
+  <Suspense fallback='loading..'>
+    <CreateSchedule></CreateSchedule>
+  </Suspense>
+}
+
+export default Container
